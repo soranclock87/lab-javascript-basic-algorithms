@@ -16,18 +16,30 @@ if(hacker1.length > hacker2.length){
 }
 
 // Iteration 3: Loops
+let newDriverName = "";
+const driver = hacker1;
 
-for(let i= 0; i < hacker1.length ; i++){
-    console.log(hacker1[i].toUpperCase() + " ");
+for (let i = 0; i < driver.length; i++) {
+  if (i < driver.length - 1) {
+    newDriverName += driver[i].toUpperCase() + " ";
+  } else {
+    newDriverName += driver[i].toUpperCase();
+  }
+}
+console.log(newDriverName);
+
+let newNavigatorName = "";
+
+for (let i = hacker2.length - 1; i >= 0; i--) {
+  newNavigatorName += hacker2[i];
 }
 
-for(let i= hacker1.length; i >= 0 ; i--){
-    console.log(hacker1[i]);
-}
+console.log(newNavigatorName);
+
 
 if(hacker1[0] > hacker2[0]){
     console.log("The driver's name goes first.")
-}else if(hacker1[0] > hacker2[0]){
+}else if(hacker1[0] < hacker2[0]){
     console.log("Yo, the navigator goes first, definitely.")
 }else {
     console.log("What?! You both have the same name?")
@@ -52,14 +64,19 @@ console.log(etNumber.length)
 
 // bonus 2
 
-const phraseToCheck  = "A man, a plan, a canal, Panama!";
 
 
-for (let i= 0; i < phraseToCheck.length / 2; i++) {
-    
-    if(phraseToCheck[i] !== phraseToCheck[phraseToCheck.length -1 - i] ){
-        console.log("try a new word")
-    }else{
-        console.log("it's a palindrom")
-    }
+const stringToCheck = "stac cats";
+
+let reversedString = "";
+for (let i = stringToCheck.length - 1; i >= 0; i--) {
+  reversedString += stringToCheck[i].toLowerCase();
+}
+
+console.log(reversedString);
+
+if (stringToCheck === reversedString) {
+  console.log("String is a palindrome");
+} else {
+  console.log("Not a palindrome");
 }
