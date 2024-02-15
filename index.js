@@ -27,7 +27,7 @@ for(let i= hacker1.length; i >= 0 ; i--){
 
 if(hacker1[0] > hacker2[0]){
     console.log("The driver's name goes first.")
-}else if(hacker1[0] > hacker2[0]){
+}else if(hacker1[0] < hacker2[0]){
     console.log("Yo, the navigator goes first, definitely.")
 }else {
     console.log("What?! You both have the same name?")
@@ -52,13 +52,16 @@ console.log(etNumber.length)
 
 // bonus 2
 
-const phraseToCheck  = "A man, a plan, a canal, Panama!";
+
+
+const phraseToCheck  = "Amor roma";
 
 
 for (let i= 0; i < phraseToCheck.length / 2; i++) {
     
     if(phraseToCheck[i] !== phraseToCheck[phraseToCheck.length -1 - i] ){
         console.log("try a new word")
+      
     }else{
         console.log("it's a palindrom")
     }
